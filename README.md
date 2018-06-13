@@ -12,11 +12,15 @@
 ```php
 <jdoc:include type="component" />
 ```
-Скорее всего потебуется захватить обкружающие ее html теги, чтобы не убрать отображение данного блока.
+Скорее всего потребуется захватить окружающие ее html теги, чтобы убрать отображение данного блока.
 
 Делаем следующую модификацию в шаблоне:
 ```php
-<?php $pagehide_show = $menu->getActive()->getParams()->get('pagehide_show', 1); ?>
+<?php 
+$app = JFactory::getApplication();
+$menu = $app->getMenu();
+$pagehide_show = $menu->getActive()->getParams()->get('pagehide_show', 1); 
+?>
 <?php if($pagehide_show==1) : ?>
 <div class="wrapper b_content">
 <jdoc:include type="component" />
