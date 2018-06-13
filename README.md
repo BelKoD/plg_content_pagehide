@@ -10,13 +10,13 @@
 По-умолчанию значение "Да".
 
 Далее в шаблоне сайта находим строку:
-
+```php
 <jdoc:include type="component" />
-
+```
 Скорее всего потебуется захватить обкружающие ее html теги, чтобы не убрать отображение данного блока.
 
 Делаем следующую модификацию в шаблоне:
-
+```php
 <?php $pagehide_show = $menu->getActive()->getParams()->get('pagehide_show', 1); ?>
 <?php if($pagehide_show==1) : ?>
 <div class="wrapper b_content">
@@ -24,5 +24,5 @@
 <div class="clearfix"></div>
 </div>
 <?php endif; ?>
-
+```
 В нужном вам меню отключаем вывод компонента и он не отображается на сайте.
