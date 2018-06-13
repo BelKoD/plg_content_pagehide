@@ -2,14 +2,14 @@
 defined('_JEXEC') or die;
 
 
-class PlgContentPageHide extends Joomla\CMS\Plugin\CMSPlugin
+class PlgContentPageHide extends JPlugin
 {
 
 	/**
-	 * Load the language file on instantiation.
+	 * Affects constructor behavior. If true, language files will be loaded automatically.
 	 *
 	 * @var    boolean
-	 * @since  3.7.0
+	 * @since  3.1
 	 */
 	protected $autoloadLanguage = true;
 
