@@ -12,7 +12,7 @@
 	<files>
 		<filename plugin="pagehide">pagehide.php</filename>
 		<folder>fields</folder>
-        <folder>languages</folder>
+        <folder>language</folder>
 	</files>
 	<config>
 	</config>
